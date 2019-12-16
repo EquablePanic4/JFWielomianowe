@@ -152,16 +152,16 @@ public class Polynomial {
         public double ValueOf(double y) {
             switch (functionType) {
                 case Sinus:
-                    return Math.sin(ValueOfInternal(y));
+                    return Math.sin(ValueOfInternal(y) * (180 / Math.PI));
 
                 case Cosinus:
-                    return Math.cos(ValueOfInternal(y));
+                    return Math.cos(ValueOfInternal(y) * (180 / Math.PI));
 
                 case Tangens:
-                    return Math.tan(ValueOfInternal(y));
+                    return Math.tan(ValueOfInternal(y) * (180 / Math.PI));
 
                 case Cotangens:
-                    return 1.0 / Math.tan(ValueOfInternal(y));
+                    return 1.0 / Math.tan(ValueOfInternal(y) * (180 / Math.PI));
 
                 case Logarithm:
                     return Math.log(ValueOfInternal(y));
